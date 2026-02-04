@@ -6,6 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './header.html',
   styleUrl: './header.sass',
 })
-export class Header {
-
-}
+export class Header {}

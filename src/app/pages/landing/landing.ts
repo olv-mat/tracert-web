@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { Header } from '../../components/header/header';
+import { Hero } from '../../components/hero/hero';
 
 // ng generate component <component>
 
 @Component({
   selector: 'app-landing',
-  imports: [Header],
+  imports: [Header, Hero],
   templateUrl: './landing.html',
   styleUrl: './landing.sass',
 })
