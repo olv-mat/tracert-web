@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Advantages } from '../../components/advantages/advantages';
+import { Contact } from '../../components/contact/contact';
 import { Demonstration } from '../../components/demonstration/demonstration';
 import { Header } from '../../components/header/header';
 import { Hero } from '../../components/hero/hero';
@@ -9,7 +10,7 @@ import { Services } from '../../components/services/services';
 
 @Component({
   selector: 'app-landing',
-  imports: [Header, Hero, Advantages, Services, Demonstration],
+  imports: [Header, Hero, Advantages, Services, Demonstration, Contact],
   templateUrl: './landing.html',
   styleUrl: './landing.sass',
 })
