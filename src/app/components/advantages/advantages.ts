@@ -6,6 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './advantages.html',
   styleUrl: './advantages.sass',
 })
-export class Advantages {
-
-}
+export class Advantages {}
