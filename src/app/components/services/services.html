@@ -1,1 +1,19 @@
-<section>Services</section>
+<section id="services" class="services">
+  <div class="services-header">
+    <h2>Conheça os Nossos <span>Serviços</span></h2>
+    <p>Somos especializados em criar soluções personalizadas que resolvem seus desafios comerciais.</p>
+  </div>
+  <div class="services-grid">
+    @for(service of services; track service.title) {
+      <app-services-card
+        [icon]="service.icon"
+        [title]="service.title"
+        [description]="service.description"
+        [useCases]="service.useCases"
+      />
+    }
+  </div>
+  <div class="services-footer">
+    <a href="#budget" class="btn-primary">Solicitar Orçamento</a>
+  </div>
+</section>

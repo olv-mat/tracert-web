@@ -1,0 +1,53 @@
+@use 'styles/colors' as c
+@use 'styles/scale' as s
+
+.service-card
+  background: c.$color-bg-main
+  padding: s.$md
+  border-radius: s.$xs
+  border: s.$xxs solid transparent
+  transition: all 0.3s ease-in-out
+  text-align: left
+  color: c.$color-text-main
+
+  &:hover
+    border-color: c.$color-primary
+    transform: translateY(-5px)
+
+  i
+    font-size: s.$lg
+    color: c.$color-primary
+    margin-bottom: s.$sm
+
+  h3
+    font-size: s.$md
+    font-weight: 600
+    margin-bottom: s.$xs
+    color: c.$color-text-main
+
+  p
+    font-size: s.$sm
+    color: c.$color-text-muted
+    font-weight: 300
+    margin-bottom: s.$md
+
+  h4
+    color: c.$color-primary
+    font-size: 0.8rem
+    font-weight: 600
+    text-transform: uppercase
+    margin-bottom: s.$xs
+
+  ul
+    list-style: none
+    padding: 0
+    
+    li
+      font-size: s.$sm
+      color: lighten(c.$color-text-muted, 15%)
+      display: flex
+      gap: s.$xs
+      margin-bottom: 4px
+      
+      span
+        color: c.$color-primary

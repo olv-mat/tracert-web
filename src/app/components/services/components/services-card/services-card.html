@@ -1,0 +1,11 @@
+<div class="service-card">
+  <i class="fas" [ngClass]="icon"></i>
+  <h3>{{ title }}</h3>
+  <p>{{ description }}</p>
+  <h4>Casos de uso</h4>
+  <ul>
+    @for(item of useCases; track item) {
+      <li><span>•</span> {{ item }}</li>
+    }
+  </ul>
+</div>
