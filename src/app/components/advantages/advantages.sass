@@ -1,0 +1,48 @@
+@use 'styles/colors' as c
+@use 'styles/layout' as l
+@use 'styles/scale' as s
+
+.advantages
+  background-color: c.$color-bg-main
+  color: c.$color-text-main
+  padding: s.$xl s.$md
+
+  @media (min-width: 768px)
+    padding: s.$xxl s.$xl
+
+  &-header
+    @include l.flex-column
+    align-items: center
+    text-align: center
+    max-width: 48rem
+    margin: 0 auto s.$xl
+    
+    h2
+      font-size: s.$lg
+      font-weight: 800
+      
+      @media (min-width: 768px)
+        font-size: s.$xl
+
+      span
+        color: c.$color-primary
+
+    p
+      color: c.$color-text-muted
+      font-size: s.$sm
+      font-weight: 300
+      margin-top: s.$sm
+      
+      @media (min-width: 768px)
+        font-size: 1.125rem
+
+  &-grid
+    display: grid
+    gap: s.$md
+    grid-template-columns: 1fr
+
+    @media (min-width: 768px)
+      grid-template-columns: repeat(2, 1fr)
+
+    @media (min-width: 1024px)
+      grid-template-columns: repeat(4, 1fr)

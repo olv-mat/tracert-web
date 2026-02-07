@@ -1,1 +1,20 @@
-<section>Advantages</section>
+<section id="advantages" class="advantages">
+  <div class="advantages-header">
+    <h2>
+      <span>Vantagens</span> de Escolher Nossas Soluções
+    </h2>
+    <p>
+      Criamos sistemas simples e eficientes que geram impacto real na organização
+      e nos resultados da sua empresa.
+    </p>
+  </div>
+  <div class="advantages-grid">
+    @for(advantage of advantages; track advantage.title) {
+      <app-advantages-card
+        [icon]="advantage.icon"
+        [title]="advantage.title"
+        [description]="advantage.description"
+      />
+    }
+  </div>
+</section>

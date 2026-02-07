@@ -1,0 +1,30 @@
+@use 'styles/colors' as c
+@use 'styles/layout' as l
+@use 'styles/scale' as s
+
+.advantage-card
+  background: c.$color-bg-surface
+  padding: s.$md
+  border-radius: s.$xs
+  text-align: center
+  border: s.$xxs solid transparent
+  transition: border 0.3s ease, transform 0.3s ease
+
+  &:hover
+    border-color: c.$color-primary
+    transform: translateY(calc(-1 * s.$xxs))
+
+  i
+    font-size: s.$lg
+    color: c.$color-primary
+    margin-bottom: s.$sm
+
+  h3
+    font-size: s.$md
+    font-weight: 600
+    margin-bottom: s.$xxs
+
+  p
+    font-size: s.$sm
+    color: c.$color-text-muted
+    font-weight: 300
