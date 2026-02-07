@@ -1,0 +1,85 @@
+@use 'styles/colors' as c
+@use 'styles/layout' as l
+@use 'styles/scale' as s
+
+.footer
+  background-color: c.$color-bg-main
+  color: c.$color-text-main
+  padding: s.$xl s.$md
+  border-top: 2px solid c.$color-primary
+
+  @media (min-width: 768px)
+    padding: s.$xl s.$xl
+
+  &-container
+    max-width: 80rem
+    margin: 0 auto
+    display: grid
+    grid-template-columns: 1fr
+    gap: s.$xl
+    
+    @media (min-width: 768px)
+      grid-template-columns: repeat(2, 1fr)
+    
+    @media (min-width: 1024px)
+      grid-template-columns: repeat(4, 1fr)
+
+  .logo-text
+    font-size: s.$lg
+    font-weight: 800
+    line-height: 1.1
+    color: c.$color-primary
+    
+    .sub-text
+      color: c.$color-text-main
+      font-size: 0.875rem
+      font-weight: 600
+
+  h4
+    font-size: 1.125rem
+    font-weight: 600
+    margin-bottom: s.$sm
+    color: c.$color-text-main
+
+    &.highlight
+      color: c.$color-primary
+
+  p, ul
+    color: c.$color-text-muted
+    font-size: 0.875rem
+    line-height: 1.6
+
+  ul
+    list-style: none
+    padding: 0
+    @include l.flex-column
+    gap: s.$xs
+
+    li
+      display: flex
+      align-items: center
+      gap: s.$xs
+
+      i
+        color: c.$color-primary
+        width: 1.2rem
+
+      a
+        color: inherit
+        text-decoration: none
+        transition: color 0.3s ease
+
+        &:hover
+          color: c.$color-primary
+
+  &-bottom
+    margin-top: s.$xl
+    padding-top: s.$md
+    border-top: 1px solid rgba(c.$color-text-muted, 0.1)
+    text-align: center
+    font-size: 0.75rem
+    color: darken(c.$color-text-muted, 10%)
+
+    span
+      color: c.$color-primary
+      font-weight: 600
