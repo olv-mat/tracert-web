@@ -1,1 +1,23 @@
-<section>Demonstration</section>
+<section id="demonstrations" class="demonstrations">
+  <div class="container">
+    <div class="header">
+      <h2><span>Demonstrações</span> na Prática</h2>
+      <p>Veja como automatizamos tarefas reais do dia a dia em diferentes contextos empresariais.</p>
+    </div>
+    <div class="divider"></div>
+    <div class="carousel-viewport">
+      <div class="carousel-track" [style.transform]="'translateX(-' + currentIndex * 100 + '%)'">
+        @for(slide of slides; track $index) {
+          <div class="slide-item">
+            <img [src]="slide.image" [alt]="slide.alt">
+          </div>
+        }
+      </div>
+    </div>
+    <div class="dots">
+      @for(slide of slides; track $index) {
+        <span [class.active]="$index === currentIndex"></span>
+      }
+    </div>
+  </div>
+</section>

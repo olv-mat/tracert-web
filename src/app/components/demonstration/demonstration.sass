@@ -1,0 +1,79 @@
+@use 'styles/colors' as c
+@use 'styles/layout' as l
+@use 'styles/scale' as s
+
+.demonstrations
+  background-color: c.$color-bg-main
+  color: c.$color-text-main
+  padding: s.$xxl s.$sm
+  overflow-x: hidden
+
+  .container
+    width: 100%
+    margin: 0 auto
+
+    @media (min-width: 1024px)
+      max-width: 80rem
+
+  .header
+    text-align: center
+    margin-bottom: s.$lg
+    h2
+      font-size: 1.8rem
+      @media (min-width: 768px)
+        font-size: s.$xl
+      span
+        color: c.$color-primary
+    p
+      color: c.$color-text-muted
+      margin-top: s.$xs
+
+  .divider
+    width: 40%
+    margin: s.$lg auto
+    border-top: 2px solid c.$color-primary
+
+  .carousel-viewport
+    width: 100%
+
+    @media (min-width: 1024px)
+      max-width: 900px
+    
+    margin: 0 auto
+    overflow: hidden
+    background: c.$color-bg-surface
+    border-radius: s.$sm
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6)
+
+  .carousel-track
+    display: flex
+    transition: transform 0.8s cubic-bezier(0.45, 0, 0.55, 1)
+    width: 100%
+
+  .slide-item
+    min-width: 100%
+    @include l.flex-center
+    
+    img
+      width: 100%
+      height: auto
+      max-height: 500px
+      display: block
+      object-fit: cover
+
+  .dots
+    @include l.flex-center
+    gap: s.$xs
+    margin-top: s.$xl
+    
+    span
+      width: 8px
+      height: 8px
+      border-radius: 50%
+      background: rgba(c.$color-text-muted, 0.3)
+      transition: all 0.4s ease
+      
+      &.active
+        background: c.$color-primary
+        width: 24px 
+        border-radius: 4px
