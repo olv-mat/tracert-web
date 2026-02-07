@@ -1,1 +1,20 @@
-<header>Header</header>
+<header>
+  <div class="header-container">
+    <h1 class="logo">Tracert</h1>
+    <button class="menu-button" (click)="toggleMenu()">
+      <i class="fas" [ngClass]="menuOpen ? 'fa-times' : 'fa-bars'"></i>
+    </button>
+    <nav class="desktop-menu">
+      <a href="#advantages">Vantagens</a>
+      <a href="#services">Serviços</a>
+      <a href="#demonstrations">Demonstrações</a>
+      <a href="#budget">Orçamento</a>
+    </nav>
+  </div>
+  <nav class="mobile-menu" [class.open]="menuOpen">
+    <a href="#advantages" (click)="closeMenu()">Vantagens</a>
+    <a href="#services" (click)="closeMenu()">Serviços</a>
+    <a href="#demonstrations" (click)="closeMenu()">Demonstrações</a>
+    <a href="#budget" (click)="closeMenu()">Orçamento</a>
+  </nav>
+</header>

@@ -1,0 +1,71 @@
+@use 'styles/colors' as c
+@use 'styles/layout' as l
+@use 'styles/scale' as s
+
+header
+  background: c.$color-bg-main
+  color: c.$color-text-main
+  border-bottom: s.$xxs solid c.$color-primary
+
+.header-container
+  @include l.flex-between
+  padding: s.$sm s.$md
+
+.logo
+  font-size: s.$md
+  font-weight: 800
+  color: c.$color-primary
+
+.menu-button
+  background: none
+  border: none
+  color: c.$color-text-main
+  font-size: s.$md
+  cursor: pointer
+  display: none
+
+.desktop-menu
+  display: flex
+  gap: s.$md
+
+  a
+    color: c.$color-text-main
+    text-decoration: none
+    transition: color 0.3s ease
+
+    &:hover
+      color: c.$color-primary
+
+.mobile-menu
+  @include l.flex-column
+  background: c.$color-bg-main
+  overflow: hidden
+  max-height: 0
+  padding: 0 s.$md
+  transition: max-height 0.4s ease, padding 0.3s ease, opacity 0.3s ease
+  opacity: 0
+
+  a
+    padding: s.$xxs 0
+    color: c.$color-text-main
+    text-decoration: none
+    transition: color 0.3s ease
+
+    &:hover
+      color: c.$color-primary
+
+.mobile-menu.open
+  max-height: 20rem
+  padding-bottom: s.$sm
+  opacity: 1
+
+@media (max-width: 48rem)
+  .logo
+    font-size: s.$md
+
+  .menu-button
+    font-size: s.$md
+    display: block
+
+  .desktop-menu
+    display: none
