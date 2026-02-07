@@ -3,16 +3,16 @@
 @use 'styles/scale' as s
 
 header
-  background: c.$color-bg-main
+  background: c.$color-background-main
   color: c.$color-text-main
-  border-bottom: s.$xxs solid c.$color-primary
+  border-bottom: calc(s.$extra-small - 0.4rem) solid c.$color-primary
 
 .header-container
   @include l.flex-between
-  padding: s.$sm s.$md
+  padding: s.$small s.$medium
 
 .logo
-  font-size: s.$md
+  font-size: s.$medium
   font-weight: 800
   color: c.$color-primary
 
@@ -20,13 +20,13 @@ header
   background: none
   border: none
   color: c.$color-text-main
-  font-size: s.$md
+  font-size: s.$medium
   cursor: pointer
   display: none
 
 .desktop-menu
   display: flex
-  gap: s.$md
+  gap: s.$medium
 
   a
     color: c.$color-text-main
@@ -38,15 +38,15 @@ header
 
 .mobile-menu
   @include l.flex-column
-  background: c.$color-bg-main
+  background: c.$color-background-main
   overflow: hidden
   max-height: 0
-  padding: 0 s.$md
+  padding: 0 s.$medium
   transition: max-height 0.4s ease, padding 0.3s ease, opacity 0.3s ease
   opacity: 0
 
   a
-    padding: s.$xxs 0
+    padding: calc(s.$extra-small - 0.4rem) 0
     color: c.$color-text-main
     text-decoration: none
     transition: color 0.3s ease
@@ -56,15 +56,15 @@ header
 
 .mobile-menu.open
   max-height: 20rem
-  padding-bottom: s.$sm
+  padding-bottom: s.$small
   opacity: 1
 
 @media (max-width: 48rem)
   .logo
-    font-size: s.$md
+    font-size: s.$medium
 
   .menu-button
-    font-size: s.$md
+    font-size: s.$medium
     display: block
 
   .desktop-menu

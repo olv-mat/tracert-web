@@ -4,19 +4,19 @@
 
 .hero
   @include l.flex-between
-  background: c.$color-bg-main
+  background: c.$color-background-main
   color: c.$color-text-main
-  padding: s.$xl s.$md
+  padding: s.$extra-large s.$medium
   min-height: calc(100vh - 72px)
-  gap: s.$lg
+  gap: s.$large
 
 .hero-content
-  width: 50%
   @include l.flex-column
-  gap: s.$sm
+  width: 50%
+  gap: s.$small
 
   h2
-    font-size: s.$xl
+    font-size: s.$extra-large
     font-weight: 800
     line-height: 1.2
 
@@ -24,56 +24,56 @@
       color: c.$color-primary
 
   p
-    font-size: calc(s.$md - (s.$xs - 0.2rem))
+    font-size: calc(s.$medium - (s.$extra-small - 0.2rem))
     color: c.$color-text-muted
     font-weight: 400
 
 .hero-actions
   @include l.flex-row
-  gap: s.$sm
-  margin-top: s.$sm
+  gap: s.$small
+  margin-top: s.$small
 
 .primary-button
+  @include l.flex-center
   background: c.$color-primary
   color: c.$color-text-main
   font-weight: 600
-  padding: s.$sm s.$md
-  border-radius: s.$xs
+  padding: s.$small s.$medium
+  border-radius: s.$extra-small
   text-decoration: none
-  @include l.flex-center
-  gap: s.$xs
+  gap: s.$extra-small
   transition: background 0.3s ease
 
   &:hover
     background: darken(c.$color-primary, 8%)
 
 .secondary-button
-  border: s.$xxs solid c.$color-primary
+  @include l.flex-center
+  border: calc(s.$extra-small - 0.4rem) solid c.$color-primary
   color: c.$color-primary
   font-weight: 600
-  padding: s.$sm s.$md
-  border-radius: s.$xs
+  padding: s.$small s.$medium
+  border-radius: s.$extra-small
   text-decoration: none
-  @include l.flex-center
   transition: all 0.3s ease
 
   &:hover
     background: c.$color-primary
-    color: c.$color-bg-main
+    color: c.$color-background-main
 
 .hero-image
-  width: 50%
   @include l.flex-center
+  width: 50%
 
   img
     width: 100%
     max-width: 32rem
-    border-radius: s.$sm
+    border-radius: s.$small
 
 @media (max-width: 48rem)
   .hero
     @include l.flex-column
-    padding: s.$lg s.$md
+    padding: s.$large s.$medium
 
   .hero-content,
   .hero-image
@@ -81,10 +81,10 @@
 
   .hero-content
     h2
-      font-size: s.$lg
+      font-size: s.$large
 
     p
-      font-size: s.$sm
+      font-size: s.$small
 
   .hero-actions
     flex-direction: column

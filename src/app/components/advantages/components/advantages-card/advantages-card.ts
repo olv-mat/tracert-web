@@ -8,7 +8,7 @@ import { Component, Input } from '@angular/core';
   styleUrl: './advantages-card.sass',
 })
 export class AdvantagesCard {
-  @Input() public icon!: string;
-  @Input() public title!: string;
-  @Input() public description!: string;
+  @Input({ required: true }) public icon!: string;
+  @Input({ required: true }) public title!: string;
+  @Input({ required: true }) public description!: string;
 }

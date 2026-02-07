@@ -1,10 +1,10 @@
 <section id="services" class="services">
   <div class="services-header">
     <h2>Conheça os Nossos <span>Serviços</span></h2>
-    <p>Somos especializados em criar soluções personalizadas que resolvem seus desafios comerciais.</p>
+    <p>Somos especializados em criar soluções personalizadas que resolvem seus problemas.</p>
   </div>
   <div class="services-grid">
-    @for(service of services; track service.title) {
+    @for(service of services; track service) {
       <app-services-card
         [icon]="service.icon"
         [title]="service.title"
@@ -14,6 +14,6 @@
     }
   </div>
   <div class="services-footer">
-    <a href="#budget" class="btn-primary">Solicitar Orçamento</a>
+    <a href="#budget" class="primary-button">Solicitar Orçamento</a>
   </div>
 </section>

@@ -3,29 +3,20 @@
 @use 'styles/scale' as s
 
 .footer
-  background-color: c.$color-bg-main
+  background-color: c.$color-background-main
   color: c.$color-text-main
-  padding: s.$xl s.$md
+  padding: s.$extra-large s.$medium
   border-top: 2px solid c.$color-primary
-
-  @media (min-width: 768px)
-    padding: s.$xl s.$xl
 
   &-container
     max-width: 80rem
     margin: 0 auto
     display: grid
     grid-template-columns: 1fr
-    gap: s.$xl
-    
-    @media (min-width: 768px)
-      grid-template-columns: repeat(2, 1fr)
-    
-    @media (min-width: 1024px)
-      grid-template-columns: repeat(4, 1fr)
+    gap: s.$extra-large
 
   .logo-text
-    font-size: s.$lg
+    font-size: s.$large
     font-weight: 800
     line-height: 1.1
     color: c.$color-primary
@@ -38,7 +29,7 @@
   h4
     font-size: 1.125rem
     font-weight: 600
-    margin-bottom: s.$sm
+    margin-bottom: s.$small
     color: c.$color-text-main
 
     &.highlight
@@ -50,15 +41,15 @@
     line-height: 1.6
 
   ul
+    @include l.flex-column
     list-style: none
     padding: 0
-    @include l.flex-column
-    gap: s.$xs
+    gap: s.$extra-small
 
     li
       display: flex
       align-items: center
-      gap: s.$xs
+      gap: s.$extra-small
 
       i
         color: c.$color-primary
@@ -73,8 +64,8 @@
           color: c.$color-primary
 
   &-bottom
-    margin-top: s.$xl
-    padding-top: s.$md
+    margin-top: s.$extra-large
+    padding-top: s.$medium
     border-top: 1px solid rgba(c.$color-text-muted, 0.1)
     text-align: center
     font-size: 0.75rem
@@ -83,3 +74,15 @@
     span
       color: c.$color-primary
       font-weight: 600
+
+@media (min-width: 768px)
+  .footer
+    padding: s.$extra-large s.$extra-large
+
+    &-container
+      grid-template-columns: repeat(2, 1fr)
+
+@media (min-width: 1024px)
+  .footer
+    &-container
+      grid-template-columns: repeat(4, 1fr)

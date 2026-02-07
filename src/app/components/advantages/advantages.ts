@@ -11,24 +11,27 @@ export class Advantages {
   public advantages = [
     {
       icon: 'fa-clock',
-      title: 'Ganhe Tempo',
-      description: 'Tenha sistemas que organizam processos e reduzem tarefas manuais no dia a dia.',
+      title: 'Economizar Tempo',
+      description:
+        'Automatize tarefas e fluxos de trabalho repetitivos, poupando o tempo da sua equipe.',
     },
     {
       icon: 'fa-dollar-sign',
-      title: 'Reduza Custos',
-      description: 'Soluções simples evitam retrabalho e ajudam a diminuir gastos operacionais.',
+      title: 'Reduzir Custos',
+      description:
+        'Reduza as despesas operacionais simplificando processos e minimizando o trabalho manual.',
     },
     {
       icon: 'fa-shield-alt',
-      title: 'Mais Confiabilidade',
+      title: 'Eliminar Erros',
       description:
-        'Sistemas feitos sob medida reduzem erros e aumentam a segurança das informações.',
+        'Elimine os erros humanos de seus processos com automações precisas e confiáveis.',
     },
     {
       icon: 'fa-bolt',
-      title: 'Mais Produtividade',
-      description: 'Ferramentas personalizadas para melhorar a eficiência da sua equipe.',
+      title: 'Produtividade',
+      description:
+        'Aumente a produção e a eficiência com soluções adaptadas às suas necessidades específicas.',
     },
   ];
 }

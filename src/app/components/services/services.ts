@@ -23,24 +23,24 @@ export class Services {
     },
     {
       icon: 'fa-chart-line',
-      title: 'Relatórios Inteligentes',
+      title: 'Relatórios e Indicadores Inteligentes',
       description:
-        'Entenda melhor os resultados do seu negócio com gráficos e números claros para tomar decisões.',
+        'Entenda melhor os resultados do seu negócio com gráficos, relatórios e números claros para tomar decisões com confiança.',
       useCases: [
         'Acompanhar indicadores personalizados',
         'Gerar relatórios automáticos',
-        'Visualizar dados com painéis',
+        'Visualizar dados com gráficos e painéis',
       ],
     },
     {
       icon: 'fa-globe',
-      title: 'Automação Web',
+      title: 'Automação de Tarefas na Internet',
       description:
-        'Automatize tarefas repetitivas na web, como preencher formulários e buscar informações.',
+        'Automatize tarefas repetitivas na web, como preencher formulários, buscar informações e conectar sistemas.',
       useCases: [
         'Coletar dados de sites automaticamente',
-        'Preencher formulários automaticamente',
-        'Integrações entre plataformas',
+        'Preencher formulários de forma automática',
+        'Fazer integrações entre plataformas e sistemas',
       ],
     },
   ];

@@ -3,28 +3,27 @@
 @use 'styles/scale' as s
 
 .advantage-card
-  background: c.$color-bg-surface
-  padding: s.$md
-  border-radius: s.$xs
+  background: c.$color-background-surface
+  padding: s.$medium
+  border-radius: s.$extra-small
   text-align: center
-  border: s.$xxs solid transparent
+  border: calc(s.$extra-small - 0.4rem) solid transparent
   transition: border 0.3s ease, transform 0.3s ease
 
   &:hover
     border-color: c.$color-primary
-    transform: translateY(calc(-1 * s.$xxs))
+    transform: translateY(calc(-1 * calc(s.$extra-small - 0.4rem)))
 
   i
-    font-size: s.$lg
+    font-size: s.$large
     color: c.$color-primary
-    margin-bottom: s.$sm
+    margin-bottom: s.$small
 
   h3
-    font-size: s.$md
+    font-size: s.$medium
     font-weight: 600
-    margin-bottom: s.$xxs
+    margin-bottom: calc(s.$extra-small - 0.4rem)
 
   p
-    font-size: s.$sm
+    font-size: s.$small
     color: c.$color-text-muted
-    font-weight: 300

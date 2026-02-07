@@ -3,54 +3,42 @@
 @use 'styles/scale' as s
 
 .services
-  background-color: c.$color-bg-surface
-  padding: s.$xxl s.$md
+  background-color: c.$color-background-surface
+  padding: calc(s.$extra-large + 1rem) s.$medium
   color: c.$color-text-main
-  
-  @media (min-width: 768px)
-    padding: s.$xxl s.$xl
 
   &-header
     @include l.flex-column
     align-items: center
     text-align: center
     max-width: 48rem
-    margin: 0 auto s.$xl
+    margin: 0 auto s.$extra-large
     
     h2
-      font-size: s.$lg
+      font-size: s.$large
       font-weight: 800
       color: c.$color-text-main
-      
-      @media (min-width: 768px)
-        font-size: s.$xl
 
       span
         color: c.$color-primary
 
     p
       color: c.$color-text-muted
-      margin-top: s.$sm
+      margin-top: s.$small
 
   &-grid
     display: grid
-    gap: s.$md
+    gap: s.$medium
     grid-template-columns: 1fr
-    
-    @media (min-width: 768px)
-      grid-template-columns: repeat(2, 1fr)
-    
-    @media (min-width: 1024px)
-      grid-template-columns: repeat(3, 1fr)
 
   &-footer
     @include l.flex-center
-    margin-top: s.$xl
+    margin-top: s.$extra-large
 
-.btn-primary
+.primary-button
   background-color: c.$color-primary
   color: white
-  padding: s.$sm s.$md
+  padding: s.$small s.$medium
   border-radius: 4px
   text-decoration: none
   font-weight: 600
@@ -58,3 +46,19 @@
   
   &:hover
     background-color: darken(c.$color-primary, 10%)
+
+@media (min-width: 768px)
+  .services
+    padding: calc(s.$extra-large + 1rem) s.$extra-large
+
+    &-header
+      h2
+        font-size: s.$extra-large
+
+    &-grid
+      grid-template-columns: repeat(2, 1fr)
+
+@media (min-width: 1024px)
+  .services
+    &-grid
+      grid-template-columns: repeat(3, 1fr)

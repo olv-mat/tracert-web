@@ -1,52 +1,55 @@
 @use 'styles/colors' as c
+@use 'styles/layout' as l
 @use 'styles/scale' as s
 
 .service-card
-  background: c.$color-bg-main
-  padding: s.$md
-  border-radius: s.$xs
-  border: s.$xxs solid transparent
+  @include l.flex-column
+  background: c.$color-background-main
+  padding: s.$medium
+  border-radius: s.$extra-small
+  border: calc(s.$extra-small - 0.4rem) solid transparent
   transition: all 0.3s ease-in-out
   text-align: left
   color: c.$color-text-main
+  height: 100%
 
   &:hover
     border-color: c.$color-primary
     transform: translateY(-5px)
 
   i
-    font-size: s.$lg
+    font-size: s.$large
     color: c.$color-primary
-    margin-bottom: s.$sm
+    margin-bottom: s.$small
 
   h3
-    font-size: s.$md
+    font-size: s.$medium
     font-weight: 600
-    margin-bottom: s.$xs
+    margin-bottom: s.$extra-small
     color: c.$color-text-main
 
   p
-    font-size: s.$sm
+    font-size: s.$small
     color: c.$color-text-muted
     font-weight: 300
-    margin-bottom: s.$md
+    margin-bottom: s.$medium
 
   h4
     color: c.$color-primary
     font-size: 0.8rem
     font-weight: 600
     text-transform: uppercase
-    margin-bottom: s.$xs
+    margin-bottom: s.$extra-small
 
   ul
     list-style: none
     padding: 0
     
     li
-      font-size: s.$sm
+      font-size: s.$small
       color: lighten(c.$color-text-muted, 15%)
       display: flex
-      gap: s.$xs
+      gap: s.$extra-small
       margin-bottom: 4px
       
       span
